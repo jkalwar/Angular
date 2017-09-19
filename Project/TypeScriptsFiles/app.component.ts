@@ -6,5 +6,16 @@ import {Component} from "@angular/core"
     templateUrl : './app.component.html'
 })
 export class AppComponent{
-
+  EmpName:string;
+  Salary:number;
+  Increment():void{
+    this.Salary = this.Salary*10;
+ }
+  /**
+   *
+   */
+  constructor() {
+      this.EmpName = 'ABC';
+      this.Salary = 1000;
+  }
 }
