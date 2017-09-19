@@ -1,0 +1,26 @@
+{
+  "name": "Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.3.1",
+    "@angular/compiler": "^4.3.1",
+    "@angular/core": "^4.3.1",
+    "@angular/forms": "^4.3.1",
+    "@angular/http": "^4.3.1",
+    "@angular/platform-browser": "^4.3.1",
+    "@angular/platform-browser-dynamic": "^4.3.1",
+    "@angular/router": "^4.3.1",
+    "core-js": "^2.5.1",
+    "rxjs": "^5.4.3",
+    "systemjs": "^0.20.19",
+    "zone.js": "^0.8.17"
+  }
+}
