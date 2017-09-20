@@ -5,8 +5,8 @@
   "main": "test.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tsc -p \"TypeScriptsFiles\" -w",
-    "server":"lite-server",
+    "build": "tsc -p \"TypeScriptsFiles\" -w",
+    "server": "lite-server",
     "start": "concurrently \"npm run build\" \"npm run server\""
   },
   "keywords": [],
@@ -21,9 +21,11 @@
     "@angular/platform-browser": "^4.3.1",
     "@angular/platform-browser-dynamic": "^4.3.1",
     "@angular/router": "^4.3.1",
+    "concurrently": "^3.5.0",
     "core-js": "^2.5.1",
     "rxjs": "^5.4.3",
     "systemjs": "^0.20.19",
+    "typescript": "^2.5.2",
     "zone.js": "^0.8.17"
   }
 }
