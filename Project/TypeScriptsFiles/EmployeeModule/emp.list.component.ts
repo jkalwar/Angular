@@ -1,4 +1,4 @@
-import {Component} from "@angular/core"
+import { Component, Output, EventEmitter } from "@angular/core"
 import {Employee} from "../EmployeeModule/Models/Employee"
 import { EmployeeLogic } from "../EmployeeModule/Logic/EmployeeLogic";
 
@@ -10,12 +10,21 @@ import { EmployeeLogic } from "../EmployeeModule/Logic/EmployeeLogic";
 })
 export class EmployeeListComponent{
     Employees:Array<Employee>;
+    @Output()
+    OnAddNew:EventEmitter<void> = new EventEmitter();
+
+
     /**
      *
      */
     constructor(private eLogic:EmployeeLogic) {
          this.Employees = eLogic.GetEmployees();
+         this.ShowAddNew();
     }
-  
+     
+    ShowAddNew():void{
+        this.OnAddNew.emit();
+    }
+
  }
   

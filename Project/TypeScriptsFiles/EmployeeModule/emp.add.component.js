@@ -15,10 +15,24 @@ var EmployeeLogic_1 = require("../EmployeeModule/Logic/EmployeeLogic");
 var EmployeeAddComponent = /** @class */ (function () {
     function EmployeeAddComponent(eLogic) {
         this.eLogic = eLogic;
+        this.OnSave = new core_1.EventEmitter();
+        this.OnCancel = new core_1.EventEmitter();
     }
     EmployeeAddComponent.prototype.SaveEmployee = function () {
         this.eLogic.SaveEmployee(new Employee_1.Employee("Jaffa", 1000));
+        this.OnSave.emit();
     };
+    EmployeeAddComponent.prototype.HideAddNew = function () {
+        this.OnCancel.emit();
+    };
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], EmployeeAddComponent.prototype, "OnSave", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], EmployeeAddComponent.prototype, "OnCancel", void 0);
     EmployeeAddComponent = __decorate([
         core_1.Component({
             selector: 'employee-add',

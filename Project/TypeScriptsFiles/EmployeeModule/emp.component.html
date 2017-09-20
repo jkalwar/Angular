@@ -1,2 +1,7 @@
-<employee-add></employee-add>
+<div [hidden]="IsAddNew">
+<employee-add (OnSave)="HideAddNew()" (OnCancel)="HideAddNew()"></employee-add>
+</div>
+
+<div [hidden]="!IsAddNew" (OnAddNew)="ShowAddNew()">
 <employee-list></employee-list>
+</div>

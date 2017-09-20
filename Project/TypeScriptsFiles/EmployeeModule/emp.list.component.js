@@ -17,8 +17,17 @@ var EmployeeListComponent = /** @class */ (function () {
      */
     function EmployeeListComponent(eLogic) {
         this.eLogic = eLogic;
+        this.OnAddNew = new core_1.EventEmitter();
         this.Employees = eLogic.GetEmployees();
+        this.ShowAddNew();
     }
+    EmployeeListComponent.prototype.ShowAddNew = function () {
+        this.OnAddNew.emit();
+    };
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], EmployeeListComponent.prototype, "OnAddNew", void 0);
     EmployeeListComponent = __decorate([
         core_1.Component({
             selector: 'employee-list',

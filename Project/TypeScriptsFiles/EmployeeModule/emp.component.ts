@@ -8,6 +8,21 @@ import { EmployeeLogic } from "../EmployeeModule/Logic/EmployeeLogic";
     templateUrl : './emp.component.html'
 })
 export class EmployeeComponent{
-  
- }
+  IsAddNew:boolean;
+  /**
+   *
+   */
+  constructor() {
+        this.IsAddNew = true;
+  }
+
+  HideAddNew():void{
+      this.IsAddNew = true;
+  }
+
+  ShowAddNew():void{
+    this.IsAddNew = false;
+}
+
+   }
   
