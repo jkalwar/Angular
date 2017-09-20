@@ -10,31 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var Employee_1 = require("./Models/Employee");
-var AppComponent = /** @class */ (function () {
-    /**
-     *
-     */
-    function AppComponent() {
-        this.EmpName = 'ABC';
-        this.Salary = 1000;
-        this.Employees = new Array();
-        this.Employees.push(new Employee_1.Employee("JK", 1000));
-        this.Employees.push(new Employee_1.Employee("Indu", 1000));
-        this.Employees.push(new Employee_1.Employee("Nishita", 1000));
+var Employee_1 = require("../EmployeeModule/Models/Employee");
+var EmployeeLogic_1 = require("../EmployeeModule/Logic/EmployeeLogic");
+var EmployeeAddComponent = /** @class */ (function () {
+    function EmployeeAddComponent(eLogic) {
+        this.eLogic = eLogic;
     }
-    AppComponent.prototype.Increment = function () {
-        this.Salary = this.Salary * 10;
+    EmployeeAddComponent.prototype.SaveEmployee = function () {
+        this.eLogic.SaveEmployee(new Employee_1.Employee("Jaffa", 1000));
     };
-    AppComponent = __decorate([
+    EmployeeAddComponent = __decorate([
         core_1.Component({
-            selector: 'my-first-tag',
+            selector: 'employee-add',
             //To check the html file in the same folder as the module js file
-            templateUrl: './app.component.html'
+            templateUrl: './emp.add.component.html'
+            //providers:[{provide:EmployeeLogic , useClass:EmployeeLogic}]
         }),
-        __metadata("design:paramtypes", [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata("design:paramtypes", [EmployeeLogic_1.EmployeeLogic])
+    ], EmployeeAddComponent);
+    return EmployeeAddComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.EmployeeAddComponent = EmployeeAddComponent;
+//# sourceMappingURL=emp.add.component.js.map

@@ -10,14 +10,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var app_component_1 = require("./app.component");
 var platform_browser_1 = require("@angular/platform-browser");
+var emp_module_1 = require("../EmployeeModule/emp.module");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, emp_module_1.EmployeeModule],
             declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            exports: [emp_module_1.EmployeeModule]
         })
     ], AppModule);
     return AppModule;

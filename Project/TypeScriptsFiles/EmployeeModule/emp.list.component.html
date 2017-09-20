@@ -1,0 +1,22 @@
+<div>
+        <h1>Employee Info</h1>
+        <table>
+            <tr>
+                <th>
+                    Emp Name
+                </th>
+                <th>
+                    Salary
+                </th>
+            </tr>
+            <tr *ngFor="let x of Employees">
+                <td>
+                    {{x.EmpName}}
+                </td>
+                <td>
+                    {{x.Salary}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    
