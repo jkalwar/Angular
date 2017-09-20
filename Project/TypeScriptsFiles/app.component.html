@@ -1,3 +1,23 @@
 <h1>Hello {{EmpName}} , your salary is {{Salary}} bit coins per year. 
     You are also provided with multiple trips to US arround the year.</h1>
 <input type="button" value ="Increment" (click)="Increment()"/>
+
+<h1>Employee Info</h1>
+ <table>
+     <tr>
+        <th>
+            Emp Name
+        </th>
+        <th>
+            Salary
+        </th>
+     </tr>
+     <tr *ngFor="let x of Employees">
+           <td>
+               {{x.EmpName}}
+           </td>
+           <td>
+               {{x.Salary}}
+           </td>
+     </tr>
+ </table>

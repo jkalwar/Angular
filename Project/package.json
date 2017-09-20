@@ -1,8 +1,7 @@
 {
-  //Install concurrently , webpack 
   "name": "Project",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a test project",
   "main": "test.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

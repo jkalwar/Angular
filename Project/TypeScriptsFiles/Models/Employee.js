@@ -1,3 +1,4 @@
+"use strict";
 // class Employee{
 //     EmpName:string;
 //     Salary:number;
@@ -6,6 +7,7 @@
 //         this.Salary=89;
 //     }
 // }
+Object.defineProperty(exports, "__esModule", { value: true });
 var Employee = /** @class */ (function () {
     function Employee(EmpName, Salary) {
         this.EmpName = EmpName;
@@ -13,4 +15,5 @@ var Employee = /** @class */ (function () {
     }
     return Employee;
 }());
+exports.Employee = Employee;
 //# sourceMappingURL=Employee.js.map

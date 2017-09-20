@@ -1,4 +1,5 @@
 import {Component} from "@angular/core"
+import {Employee} from "./Models/Employee"
 
 @Component({
     selector : 'my-first-tag' ,
@@ -6,16 +7,23 @@ import {Component} from "@angular/core"
     templateUrl : './app.component.html'
 })
 export class AppComponent{
+  Employees:Array<Employee>;
   EmpName:string;
   Salary:number;
-  Increment():void{
-    this.Salary = this.Salary*10;
- }
   /**
    *
    */
   constructor() {
-      this.EmpName = 'ABC';
-      this.Salary = 1000;
+       this.EmpName = 'ABC';
+       this.Salary = 1000;
+       this.Employees =  new Array<Employee>();
+       this.Employees.push(new Employee("JK",1000));      
+       this.Employees.push(new Employee("Indu",1000));      
+       this.Employees.push(new Employee("Nishita",1000));      
   }
-}
+
+  Increment():void{
+      this.Salary = this.Salary*10;
+  }
+ }
+  

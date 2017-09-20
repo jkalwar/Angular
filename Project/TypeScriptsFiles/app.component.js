@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var Employee_1 = require("./Models/Employee");
 var AppComponent = /** @class */ (function () {
     /**
      *
@@ -17,6 +18,10 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.EmpName = 'ABC';
         this.Salary = 1000;
+        this.Employees = new Array();
+        this.Employees.push(new Employee_1.Employee("JK", 1000));
+        this.Employees.push(new Employee_1.Employee("Indu", 1000));
+        this.Employees.push(new Employee_1.Employee("Nishita", 1000));
     }
     AppComponent.prototype.Increment = function () {
         this.Salary = this.Salary * 10;
