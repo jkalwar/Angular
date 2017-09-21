@@ -18,9 +18,9 @@ export class EmployeeAddComponent{
 
    @Output()
    OnCancel:EventEmitter<void> =  new EventEmitter<void>();
-   
+   emp:Employee = new Employee("",0);
     SaveEmployee():void{
-        this.eLogic.SaveEmployee(new Employee("Jaffa",1000));
+        this.eLogic.SaveEmployee(this.emp);
         this.OnSave.emit();
     }
     HideAddNew():void{

@@ -13,16 +13,16 @@ export class EmployeeComponent{
    *
    */
   constructor() {
-        this.IsAddNew = false;
+        this.IsAddNew = true;
   }
 
   HideAddNew():void{
-      this.IsAddNew = true;
+      this.IsAddNew = false;
   }
 
   AddNew():void{
-    this.IsAddNew = false;
-}
+    this.IsAddNew = true;
+  }
 
    }
   
