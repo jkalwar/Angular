@@ -1,7 +1,7 @@
-<div [hidden]="IsAddNew">
+<div *ngIf="IsAddNew">
 <employee-add (OnSave)="HideAddNew()" (OnCancel)="HideAddNew()"></employee-add>
 </div>
 
-<div [hidden]="!IsAddNew" (OnAddNew)="ShowAddNew()">
-<employee-list></employee-list>
+<div *ngIf="!IsAddNew" >
+<employee-list (OnAddNew)="AddNew()"></employee-list>
 </div>

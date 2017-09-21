@@ -19,7 +19,6 @@ var EmployeeListComponent = /** @class */ (function () {
         this.eLogic = eLogic;
         this.OnAddNew = new core_1.EventEmitter();
         this.Employees = eLogic.GetEmployees();
-        this.ShowAddNew();
     }
     EmployeeListComponent.prototype.ShowAddNew = function () {
         this.OnAddNew.emit();

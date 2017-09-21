@@ -15,12 +15,12 @@ var EmployeeComponent = /** @class */ (function () {
      *
      */
     function EmployeeComponent() {
-        this.IsAddNew = true;
+        this.IsAddNew = false;
     }
     EmployeeComponent.prototype.HideAddNew = function () {
         this.IsAddNew = true;
     };
-    EmployeeComponent.prototype.ShowAddNew = function () {
+    EmployeeComponent.prototype.AddNew = function () {
         this.IsAddNew = false;
     };
     EmployeeComponent = __decorate([

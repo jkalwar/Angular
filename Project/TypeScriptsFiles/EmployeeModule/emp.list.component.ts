@@ -11,20 +11,16 @@ import { EmployeeLogic } from "../EmployeeModule/Logic/EmployeeLogic";
 export class EmployeeListComponent{
     Employees:Array<Employee>;
     @Output()
-    OnAddNew:EventEmitter<void> = new EventEmitter();
-
-
+    OnAddNew:EventEmitter<void> = new EventEmitter<void>();
     /**
      *
      */
     constructor(private eLogic:EmployeeLogic) {
          this.Employees = eLogic.GetEmployees();
-         this.ShowAddNew();
     }
      
     ShowAddNew():void{
         this.OnAddNew.emit();
     }
-
  }
   

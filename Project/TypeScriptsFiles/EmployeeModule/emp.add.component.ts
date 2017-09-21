@@ -14,10 +14,10 @@ export class EmployeeAddComponent{
    }
 
    @Output()
-   OnSave:EventEmitter<void> =  new EventEmitter();
+   OnSave:EventEmitter<void> =  new EventEmitter<void>();
 
    @Output()
-   OnCancel:EventEmitter<void> =  new EventEmitter();
+   OnCancel:EventEmitter<void> =  new EventEmitter<void>();
    
     SaveEmployee():void{
         this.eLogic.SaveEmployee(new Employee("Jaffa",1000));

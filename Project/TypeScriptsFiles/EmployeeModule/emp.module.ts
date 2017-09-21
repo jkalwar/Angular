@@ -5,11 +5,12 @@ import {EmployeeAddComponent} from "../EmployeeModule/emp.add.component";
 import {EmployeeListComponent} from "../EmployeeModule/emp.list.component";
 import { CommonModule } from "@angular/common";
 import { EmployeeLogic } from "./Logic/EmployeeLogic";
+import { ConcatPipe } from "../Pipes/concat.pipe";
 
 
 @NgModule({
     imports : [CommonModule],
-    declarations : [EmployeeAddComponent , EmployeeComponent , EmployeeListComponent],
+    declarations : [ ConcatPipe,EmployeeAddComponent , EmployeeComponent , EmployeeListComponent],
     exports : [EmployeeComponent],
     providers:[{provide:EmployeeLogic , useClass:EmployeeLogic}]
 })
