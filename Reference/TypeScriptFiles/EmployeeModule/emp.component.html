@@ -1,0 +1,6 @@
+<div *ngIf="!IsAddNew">
+<employee-list  (OnAddNew)="ShowAddNew()"></employee-list>
+</div>
+<div *ngIf="IsAddNew">
+<employee-add (OnSave)="HideAddNew()" (OnCancel)="HideAddNew()"></employee-add>
+</div>

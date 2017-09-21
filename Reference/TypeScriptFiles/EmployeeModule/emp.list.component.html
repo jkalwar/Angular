@@ -1,0 +1,21 @@
+
+<h1 mouseovercolor='purple'>Employee Info</h1>
+<div>
+    Button Color:
+    <input type="radio" name="buttonColor" checked (click)="SetGreen()"  >Green
+    <input type="radio"  name="buttonColor" (click)="SetOrange()"  >Orange
+    <br>{{myColor}}
+    <input [mouseovercolor]='myColor'
+     type="button" value="Add New"
+     (click)="ShowAddNew()">
+    <table>
+        <tr mouseovercolor='yellow'>
+            <th>EmpName</th>
+            <th>Salary</th>
+        </tr>
+        <tr *ngFor="let x of Employees" mouseovercolor='blue'>
+            <td>{{x.EmpName |uppercase|concat:'a':'b':x.Salary }}</td>
+            <td>{{x.Salary | currency}}</td>
+        </tr>
+    </table>
+</div>
