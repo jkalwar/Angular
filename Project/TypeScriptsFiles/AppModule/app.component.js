@@ -29,4 +29,30 @@ var AppComponent = /** @class */ (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+var ProductComponent = /** @class */ (function () {
+    function ProductComponent() {
+    }
+    ProductComponent = __decorate([
+        core_1.Component({
+            selector: 'product',
+            //To check the html file in the same folder as the module js file
+            template: '<h1>Customer</h1>',
+        })
+    ], ProductComponent);
+    return ProductComponent;
+}());
+exports.ProductComponent = ProductComponent;
+var CustomerComponent = /** @class */ (function () {
+    function CustomerComponent() {
+    }
+    CustomerComponent = __decorate([
+        core_1.Component({
+            selector: 'customer',
+            //To check the html file in the same folder as the module js file
+            template: '<h1>Customer</h1>',
+        })
+    ], CustomerComponent);
+    return CustomerComponent;
+}());
+exports.CustomerComponent = CustomerComponent;
 //# sourceMappingURL=app.component.js.map

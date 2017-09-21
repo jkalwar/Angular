@@ -23,3 +23,24 @@ export class AppComponent{
 
  }
   
+ @Component({
+    selector : 'product' ,
+    //To check the html file in the same folder as the module js file
+    template : '<h1>Customer</h1>' ,
+    
+})
+export class ProductComponent{
+
+ }
+  
+ @Component({
+    selector : 'customer' ,
+    //To check the html file in the same folder as the module js file
+    template : '<h1>Customer</h1>' ,
+    
+})
+export class CustomerComponent{
+
+ }
+ 
+

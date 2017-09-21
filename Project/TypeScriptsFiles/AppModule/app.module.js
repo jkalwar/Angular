@@ -11,15 +11,22 @@ var core_1 = require("@angular/core");
 var app_component_1 = require("./app.component");
 var platform_browser_1 = require("@angular/platform-browser");
 var emp_module_1 = require("../EmployeeModule/emp.module");
+var router_1 = require("@angular/router");
+var emp_component_1 = require("../EmployeeModule/emp.component");
+var c = [
+    { path: 'Customer', component: app_component_1.CustomerComponent },
+    { path: 'Product', component: app_component_1.ProductComponent },
+    { path: 'Employee', component: emp_component_1.EmployeeComponent }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, emp_module_1.EmployeeModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent],
-            exports: [emp_module_1.EmployeeModule]
+            imports: [platform_browser_1.BrowserModule, emp_module_1.EmployeeModule,
+                router_1.RouterModule.forRoot(c, { useHash: true })],
+            declarations: [app_component_1.AppComponent, app_component_1.CustomerComponent, app_component_1.ProductComponent],
+            bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
     return AppModule;
