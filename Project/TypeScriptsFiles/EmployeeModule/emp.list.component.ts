@@ -16,7 +16,13 @@ export class EmployeeListComponent{
      *
      */
     constructor(private eLogic:EmployeeLogic) {
-         this.Employees = eLogic.GetEmployees();
+         eLogic.GetEmployees().subscribe((r)=>
+         {
+             let tempEmp:Array<any>=r.json();
+             this.Employees = tempEmp.map((e)=>{
+                 return new Employee(e.FirstName+" "+e.LastName, e.Salary);
+             });
+         });
     }
      
     ShowAddNew():void{

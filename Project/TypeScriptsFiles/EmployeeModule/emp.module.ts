@@ -6,7 +6,8 @@ import {EmployeeListComponent} from "../EmployeeModule/emp.list.component";
 import { CommonModule } from "@angular/common";
 import { EmployeeLogic } from "./Logic/EmployeeLogic";
 import { ConcatPipe } from "../Pipes/concat.pipe";
-import {FormsModule} from "@angular/forms"
+import {FormsModule} from "@angular/forms";
+import {Http , HttpModule} from "@angular/http"
 
 
 @NgModule({

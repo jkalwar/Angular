@@ -11,7 +11,7 @@
                     Salary
                 </th>
             </tr>
-            <tr *ngFor="let x of Employees">
+            <tr *ngFor="let x of Employees" mouseover>
                 <td>
                     {{x.EmpName | concat:'a':'b':x.Salary | uppercase}}
                 </td>
