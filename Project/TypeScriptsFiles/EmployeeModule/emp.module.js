@@ -15,12 +15,13 @@ var common_1 = require("@angular/common");
 var EmployeeLogic_1 = require("./Logic/EmployeeLogic");
 var concat_pipe_1 = require("../Pipes/concat.pipe");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var EmployeeModule = /** @class */ (function () {
     function EmployeeModule() {
     }
     EmployeeModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule, forms_1.FormsModule],
+            imports: [common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule],
             declarations: [concat_pipe_1.ConcatPipe, emp_add_component_1.EmployeeAddComponent, emp_component_1.EmployeeComponent, emp_list_component_1.EmployeeListComponent],
             exports: [emp_component_1.EmployeeComponent],
             providers: [{ provide: EmployeeLogic_1.EmployeeLogic, useClass: EmployeeLogic_1.EmployeeLogic }]

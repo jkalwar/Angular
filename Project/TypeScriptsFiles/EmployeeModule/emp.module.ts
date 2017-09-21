@@ -11,8 +11,8 @@ import {Http , HttpModule} from "@angular/http"
 
 
 @NgModule({
-    imports : [CommonModule , FormsModule ],
-    declarations : [ ConcatPipe,EmployeeAddComponent , EmployeeComponent , EmployeeListComponent],
+    imports : [CommonModule , FormsModule , HttpModule],
+    declarations : [ConcatPipe,EmployeeAddComponent , EmployeeComponent , EmployeeListComponent],
     exports : [EmployeeComponent],
     providers:[{provide:EmployeeLogic , useClass:EmployeeLogic}]
 })

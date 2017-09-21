@@ -20,7 +20,7 @@ export class EmployeeListComponent{
          {
              let tempEmp:Array<any>=r.json();
              this.Employees = tempEmp.map((e)=>{
-                 return new Employee(e.FirstName+" "+e.LastName, e.Salary);
+                 return new Employee(e.FirsName+" "+e.LastName, e.Salary);
              });
          });
     }

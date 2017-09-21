@@ -23,7 +23,7 @@ var EmployeeListComponent = /** @class */ (function () {
         eLogic.GetEmployees().subscribe(function (r) {
             var tempEmp = r.json();
             _this.Employees = tempEmp.map(function (e) {
-                return new Employee_1.Employee(e.FirstName + " " + e.LastName, e.Salary);
+                return new Employee_1.Employee(e.FirsName + " " + e.LastName, e.Salary);
             });
         });
     }

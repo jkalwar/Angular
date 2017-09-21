@@ -24,7 +24,7 @@ var EmployeeLogic = /** @class */ (function () {
     }
     EmployeeLogic.prototype.GetEmployees = function () {
         return this.http.
-            get("http://trainitservice.azurewebsites/api/employee");
+            get("http://trainitservice.azurewebsites.net/api/employee");
     };
     EmployeeLogic.prototype.SaveEmployee = function (e) {
         this.Employees.push(e);

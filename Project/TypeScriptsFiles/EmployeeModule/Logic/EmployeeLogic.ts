@@ -22,7 +22,7 @@ constructor( private http:Http) {
 
 GetEmployees():Observable<Response>{
     return this.http.
-    get("http://trainitservice.azurewebsites/api/employee");
+    get("http://trainitservice.azurewebsites.net/api/employee");
 }
 
 SaveEmployee(e:Employee):void{
